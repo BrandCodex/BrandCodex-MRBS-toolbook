@@ -1,0 +1,342 @@
+# Voice and Tone Guidelines
+# Brandcodex — The Index of Machine-Readable Identities
+
+voice:
+  description: "How Brandcodex sounds across all communications"
+  
+  core_attributes:
+    - "Authoritative yet accessible"
+    - "Technical yet human"
+    - "Precise yet engaging"
+    - "Confident yet humble"
+    - "Forward-thinking yet grounded"
+  
+  voice_equation: |
+    Technical Precision + Human Clarity = Brandcodex Voice
+    
+    We write like a senior engineer who's also a great teacher—
+    deep expertise, zero condescension, genuine desire to help.
+  
+  we_sound_like:
+    - "A knowledgeable colleague explaining a complex system clearly"
+    - "Documentation that actually answers your questions"
+    - "A technical standard that's a pleasure to read"
+    - "The expert at the conference who's approachable during breaks"
+    
+  we_dont_sound_like:
+    - "A marketing brochure full of buzzwords"
+    - "An academic paper dense with jargon"
+    - "A chatbot with forced enthusiasm"
+    - "A gatekeeper who makes you feel stupid"
+    - "A corporate entity speaking in third person"
+
+tone_by_context:
+  technical_documentation:
+    description: "Clear, precise, thorough"
+    use_for:
+      - "MRBS specification"
+      - "API documentation"
+      - "Schema references"
+      - "Integration guides"
+    characteristics:
+      - "Precise"
+      - "Structured"
+      - "Comprehensive"
+      - "Neutral"
+    rules:
+      contractions: false
+      colloquialisms: false
+      humor: false
+      rhetorical_questions: false
+      code_examples: "required_where_relevant"
+      sentence_length: "varied, clarity over brevity"
+    vocabulary:
+      use:
+        - "MUST, SHOULD, MAY" (RFC 2119 keywords where appropriate)
+        - "Specifies", "defines", "requires"
+        - Technical terms with definitions on first use
+      avoid:
+        - "Simply", "just", "easy" (dismissive)
+        - "Obviously", "clearly" (assumes knowledge)
+        - Marketing language
+    examples:
+      good: |
+        The `brand.manifest.json` file MUST be located at the root of the brand system directory.
+        This file serves as the entry point for AI agents and contains paths to all components.
+      bad: |
+        Just drop the manifest.json in your folder and you're good to go!
+        It's super easy to set up.
+
+  educational_content:
+    description: "Helpful, encouraging, progressive"
+    use_for:
+      - "Getting started guides"
+      - "Tutorials"
+      - "Blog posts about concepts"
+      - "Migration guides"
+    characteristics:
+      - "Supportive"
+      - "Step-by-step"
+      - "Encouraging"
+      - "Clear"
+    rules:
+      contractions: true
+      colloquialisms: "moderate"
+      humor: "light, relevant"
+      rhetorical_questions: "to engage"
+      examples: "abundant"
+    vocabulary:
+      use:
+        - "You'll", "Let's", "Here's how"
+        - "Think of it like..."
+        - "The key insight is..."
+      avoid:
+        - Assuming prior knowledge without explanation
+        - Overwhelming with options before basics
+        - "As you probably know..." (maybe they don't)
+    examples:
+      good: |
+        Let's start with the most important file in any MRBS system: the manifest.
+        Think of it as the table of contents—it tells AI agents where to find everything.
+        
+        Here's the simplest possible manifest:
+        ```json
+        {
+          "mrbs_version": "1.0.0",
+          "brand": { "name": "Your Brand" }
+        }
+        ```
+      bad: |
+        Obviously, you need to create your manifest first. 
+        The schema is self-explanatory, so just follow the patterns.
+
+  marketing_website:
+    description: "Confident, compelling, clear value"
+    use_for:
+      - "Landing pages"
+      - "Product descriptions"
+      - "Feature announcements"
+      - "Case studies"
+    characteristics:
+      - "Confident"
+      - "Benefit-focused"
+      - "Concise"
+      - "Action-oriented"
+    rules:
+      contractions: true
+      colloquialisms: "limited"
+      humor: "subtle if any"
+      rhetorical_questions: "strategic"
+      sentence_length: "punchy, varied"
+    vocabulary:
+      use:
+        - Active verbs: "Enable", "Transform", "Define", "Validate"
+        - Benefit language: "Finally", "At last", "Now you can"
+        - Specifics over generics: numbers, concrete outcomes
+      avoid:
+        - "Revolutionary", "game-changing", "disruptive"
+        - "Best-in-class", "world-class", "leading"
+        - Empty superlatives
+    examples:
+      good: |
+        Your brand guidelines are trapped in a PDF.
+        AI can't read PDFs.
+        
+        Brandcodex changes that.
+        
+        Transform your brand identity into structured, machine-readable formats
+        that AI agents can interpret and apply—automatically.
+      bad: |
+        Brandcodex is a revolutionary platform that leverages cutting-edge 
+        AI technology to disrupt the brand management space with world-class
+        machine learning capabilities.
+
+  community_communications:
+    description: "Warm, collaborative, respectful"
+    use_for:
+      - "GitHub discussions"
+      - "Social media"
+      - "Community updates"
+      - "Contributor communications"
+    characteristics:
+      - "Friendly"
+      - "Grateful"
+      - "Inclusive"
+      - "Responsive"
+    rules:
+      contractions: true
+      colloquialisms: true
+      humor: "welcome"
+      emoji: "sparingly"
+      personal_pronouns: "we, you, us"
+    vocabulary:
+      use:
+        - "Thanks for...", "Great question!", "We appreciate..."
+        - "Community", "together", "contribution"
+        - Names when responding to individuals
+      avoid:
+        - Corporate speak
+        - Dismissive responses
+        - Ignoring valid criticism
+    examples:
+      good: |
+        Thanks for opening this issue, @developer! You've spotted a real gap 
+        in how we handle color references. We're tracking this for v1.1.
+        
+        Would you be interested in contributing a fix? Happy to help you 
+        get started if so. 🎉
+      bad: |
+        Thank you for your inquiry. Your feedback has been received and will
+        be reviewed by the appropriate team members in due course.
+
+  error_messages:
+    description: "Clear, helpful, never blaming"
+    use_for:
+      - "Validation errors"
+      - "API error responses"
+      - "Form validation"
+    characteristics:
+      - "Clear about what went wrong"
+      - "Helpful about how to fix it"
+      - "Never blaming the user"
+    rules:
+      contractions: true
+      include_solution: true
+      be_specific: true
+    examples:
+      good: |
+        Couldn't find the color token `{color.brand.primary}`.
+        Check that this token is defined in your colors.tokens.json file.
+        
+        Expected location: ./visual/colors.tokens.json → color.brand.primary
+      bad: |
+        Error: Invalid token reference.
+
+writing_rules:
+  grammar:
+    active_voice: "strongly preferred"
+    passive_voice: "only when actor is unimportant or unknown"
+    oxford_comma: true
+    sentence_fragments: "acceptable in marketing, not in docs"
+    
+  punctuation:
+    periods: "Yes, even in bullet points if they're sentences"
+    exclamation_marks: "Maximum one per page in marketing, zero in docs"
+    semicolons: "Sparingly; most readers prefer separate sentences"
+    em_dashes: "Use for emphasis—but don't overdo it"
+    
+  capitalization:
+    headings: "Sentence case (not Title Case)"
+    product_names: "Brandcodex, MRBS, MCP"
+    features: "Sentence case"
+    acronyms: "Define on first use: Machine-Readable Brand System (MRBS)"
+    
+  numbers:
+    spell_out: "one through ten"
+    use_numerals: "11 and above, all technical values"
+    exceptions:
+      - "Always numerals: percentages, measurements, code, version numbers"
+      - "Always spell out: starting a sentence"
+      
+  code_references:
+    inline_code: "Use backticks for `file.names`, `token.paths`, and `code`"
+    code_blocks: "Use fenced code blocks with language hints"
+    paths: "Always use backticks: `./visual/colors.tokens.json`"
+
+vocabulary_guidelines:
+  preferred_terms:
+    - use: "brand system"
+      instead_of: "brand kit"
+      reason: "System implies structure; kit implies collection"
+      
+    - use: "machine-readable"
+      instead_of: "AI-friendly"
+      reason: "More precise, less buzzwordy"
+      
+    - use: "token"
+      instead_of: "variable"
+      reason: "Industry standard term for design values"
+      
+    - use: "constraint"
+      instead_of: "rule"
+      reason: "More precise—implies testable condition"
+      
+    - use: "validate"
+      instead_of: "check"
+      reason: "Implies formal verification process"
+      
+    - use: "publish"
+      instead_of: "upload"
+      reason: "Implies making available to others"
+      
+  avoid_words:
+    - word: "synergy"
+      reason: "Corporate jargon with no meaning"
+      
+    - word: "leverage"
+      as: "verb"
+      reason: "Use 'use' instead"
+      
+    - word: "disruptive"
+      reason: "Overused, often meaningless"
+      
+    - word: "revolutionary"
+      reason: "Hyperbolic, undermines credibility"
+      
+    - word: "seamless"
+      reason: "Usually false; things have seams"
+      
+    - word: "easy"
+      reason: "Subjective; what's easy for you may not be for others"
+      
+    - word: "simple"
+      reason: "Often condescending; prefer 'straightforward' if needed"
+      
+    - word: "utilize"
+      reason: "Just say 'use'"
+      
+  jargon_policy:
+    rule: "Define technical terms on first use, then use freely"
+    example: |
+      The Machine-Readable Brand System (MRBS) specification defines how to
+      structure brand identity for AI consumption. Throughout this guide,
+      we'll refer to MRBS-compliant brand systems...
+
+content_structure:
+  headlines:
+    max_words: 8
+    style: "Clear benefit or intriguing question"
+    capitalization: "Sentence case"
+    punctuation: "No period"
+    examples:
+      good:
+        - "Make your brand AI-ready"
+        - "Brand guidelines that machines understand"
+        - "From PDF to programmable"
+      bad:
+        - "Introducing the revolutionary Brandcodex platform"
+        - "Everything You Need To Know About Machine-Readable Brands"
+        
+  paragraphs:
+    ideal_sentences: "2-4"
+    max_sentences: 5
+    first_sentence: "Lead with the point, not the setup"
+    structure: "One idea per paragraph"
+    
+  bullet_points:
+    max_items: 6
+    max_words_per_item: 15
+    parallel_structure: true
+    punctuation: "No periods unless full sentences"
+    
+  calls_to_action:
+    style: "Specific action, clear outcome"
+    examples:
+      good:
+        - "Explore the specification"
+        - "View example brand systems"
+        - "Start with the quick start guide"
+      bad:
+        - "Click here"
+        - "Learn more"
+        - "Get started" (too vague)

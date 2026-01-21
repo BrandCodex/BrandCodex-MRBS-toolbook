@@ -1,0 +1,203 @@
+{
+  "$schema": "https://mrbs.dev/schema/v1/logo.manifest.json",
+  "logo": {
+    "primary": {
+      "id": "primary",
+      "name": "Primary Logo",
+      "description": "Full Brandcodex wordmark with icon, for light backgrounds",
+      "file": "brandcodex-logo-primary.svg",
+      "formats": {
+        "svg": "brandcodex-logo-primary.svg",
+        "png_1x": "brandcodex-logo-primary.png",
+        "png_2x": "brandcodex-logo-primary@2x.png",
+        "png_4x": "brandcodex-logo-primary@4x.png"
+      },
+      "colors": {
+        "icon": "#2D1B69",
+        "wordmark": "#2D1B69",
+        "accent": "#00FFD1"
+      },
+      "usage": {
+        "contexts": ["website_light", "documents", "light_presentations", "print_light"],
+        "background": "light",
+        "min_background_luminance": 0.7
+      }
+    },
+    "reversed": {
+      "id": "reversed",
+      "name": "Reversed Logo",
+      "description": "Light version for dark backgrounds (Codex Purple, dark grays)",
+      "file": "brandcodex-logo-reversed.svg",
+      "formats": {
+        "svg": "brandcodex-logo-reversed.svg",
+        "png_1x": "brandcodex-logo-reversed.png",
+        "png_2x": "brandcodex-logo-reversed@2x.png"
+      },
+      "colors": {
+        "icon": "#FFFFFF",
+        "wordmark": "#FFFFFF",
+        "accent": "#00FFD1"
+      },
+      "usage": {
+        "contexts": ["website_dark", "dark_presentations", "hero_sections", "video"],
+        "background": "dark",
+        "max_background_luminance": 0.4
+      },
+      "use_when": "background_luminance < 0.5"
+    },
+    "icon": {
+      "id": "icon",
+      "name": "Brandcodex Icon",
+      "description": "Standalone logomark without wordmark, for small spaces and favicons",
+      "file": "brandcodex-icon.svg",
+      "formats": {
+        "svg": "brandcodex-icon.svg",
+        "png_16": "brandcodex-icon-16.png",
+        "png_32": "brandcodex-icon-32.png",
+        "png_64": "brandcodex-icon-64.png",
+        "png_128": "brandcodex-icon-128.png",
+        "png_256": "brandcodex-icon-256.png",
+        "png_512": "brandcodex-icon-512.png",
+        "ico": "favicon.ico",
+        "apple_touch": "apple-touch-icon.png"
+      },
+      "colors": {
+        "primary": "#2D1B69",
+        "accent": "#00FFD1"
+      },
+      "usage": {
+        "contexts": ["favicon", "app_icon", "social_avatar", "browser_tab", "mobile_app"],
+        "minimum_size": "24px"
+      },
+      "variants": {
+        "dark_bg": "brandcodex-icon-reversed.svg",
+        "monochrome": "brandcodex-icon-mono.svg"
+      }
+    },
+    "wordmark": {
+      "id": "wordmark",
+      "name": "Wordmark Only",
+      "description": "Text-only logo, 'Brandcodex' without icon",
+      "file": "brandcodex-wordmark.svg",
+      "formats": {
+        "svg": "brandcodex-wordmark.svg",
+        "png_1x": "brandcodex-wordmark.png"
+      },
+      "typography": {
+        "font": "Clash Display",
+        "weight": 600,
+        "tracking": "-0.02em"
+      },
+      "usage": {
+        "contexts": ["inline_text_references", "limited_height_spaces"],
+        "minimum_width": "100px"
+      }
+    },
+    "badge": {
+      "id": "badge",
+      "name": "MRBS Compliant Badge",
+      "description": "Badge for indicating MRBS compliance",
+      "file": "mrbs-compliant-badge.svg",
+      "formats": {
+        "svg": "mrbs-compliant-badge.svg",
+        "png_1x": "mrbs-compliant-badge.png"
+      },
+      "usage": {
+        "contexts": ["third_party_websites", "documentation", "github_readme"],
+        "purpose": "Indicates MRBS specification compliance"
+      },
+      "guidelines": "May be used by any MRBS-compliant implementation without permission"
+    }
+  },
+  "icon_design": {
+    "concept": "Abstract representation of structured knowledge/codex",
+    "elements": {
+      "primary_shape": "Geometric book/codex form",
+      "accent_element": "Cyan highlight representing code/AI interface",
+      "style": "Minimal, geometric, modern"
+    },
+    "grid": {
+      "base": "24x24",
+      "scalable": true
+    }
+  },
+  "rules": {
+    "minimum_size": {
+      "digital": {
+        "full_logo": "120px width",
+        "icon_only": "24px",
+        "wordmark": "100px width"
+      },
+      "print": {
+        "full_logo": "30mm width",
+        "icon_only": "8mm",
+        "wordmark": "25mm width"
+      }
+    },
+    "clear_space": {
+      "measurement": "Height of the icon element",
+      "minimum": "1x on all sides",
+      "description": "This invisible boundary must remain free of other elements"
+    },
+    "backgrounds": {
+      "approved": [
+        {"type": "solid", "colors": ["white", "neutral-50"], "logo_variant": "primary"},
+        {"type": "solid", "colors": ["primary", "neutral-900"], "logo_variant": "reversed"},
+        {"type": "gradient", "gradients": ["codex_glow", "depth"], "logo_variant": "reversed"}
+      ],
+      "prohibited": [
+        {"type": "pattern", "reason": "Reduces readability"},
+        {"type": "image", "note": "Unless sufficient contrast area provided"},
+        {"type": "low_contrast", "reason": "Must meet 3:1 minimum"}
+      ]
+    },
+    "modifications": {
+      "prohibited": [
+        {"action": "rotate", "description": "Logo must appear level"},
+        {"action": "skew", "description": "No distortion allowed"},
+        {"action": "stretch", "description": "Maintain aspect ratio"},
+        {"action": "recolor", "description": "Use only approved color variants"},
+        {"action": "add_effects", "description": "No shadows, glows, or outlines beyond approved"},
+        {"action": "crop", "description": "Do not crop any part"},
+        {"action": "add_elements", "description": "Do not add text or graphics to logo"},
+        {"action": "recreate", "description": "Use only official files"},
+        {"action": "animate", "description": "No animation without explicit approval"}
+      ]
+    },
+    "cobranding": {
+      "partner_logos": {
+        "separation": "2x clear space between logos",
+        "sizing": "Equal visual weight",
+        "order": "Brandcodex logo first (left or top)"
+      }
+    }
+  },
+  "selection_guide": {
+    "by_context": {
+      "website_header": "primary or reversed (based on header bg)",
+      "website_footer": "primary or icon",
+      "favicon": "icon",
+      "og_image": "primary or reversed",
+      "email_signature": "primary (small)",
+      "presentation_title": "reversed (on dark slide)",
+      "presentation_footer": "icon (small)",
+      "social_media_profile": "icon",
+      "github_readme": "badge or primary",
+      "documentation": "primary",
+      "merchandise": "icon or primary"
+    },
+    "by_size": {
+      "large": ["primary", "reversed"],
+      "medium": ["primary", "wordmark"],
+      "small": ["icon", "wordmark"],
+      "tiny": ["icon"]
+    },
+    "by_background": {
+      "white_or_light": "primary",
+      "codex_purple": "reversed",
+      "dark_gray_black": "reversed",
+      "gradient_dark": "reversed",
+      "busy_image": "reversed with contrast area"
+    }
+  }
+}

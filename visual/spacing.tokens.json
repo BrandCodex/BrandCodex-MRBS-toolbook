@@ -1,0 +1,102 @@
+{
+  "$schema": "https://mrbs.dev/schema/v1/spacing.tokens.json",
+  "spacing": {
+    "base_unit": {
+      "$value": "8px",
+      "$type": "dimension",
+      "description": "Base spacing unit - all spacing derives from this 8px grid"
+    },
+    "scale": {
+      "0": {"$value": "0", "multiplier": 0},
+      "px": {"$value": "1px", "usage": "borders, fine_adjustments"},
+      "0.5": {"$value": "2px", "multiplier": 0.25, "usage": "micro_spacing"},
+      "1": {"$value": "4px", "multiplier": 0.5, "usage": "tight_inline_spacing"},
+      "2": {"$value": "8px", "multiplier": 1, "usage": "compact_spacing"},
+      "3": {"$value": "12px", "multiplier": 1.5, "usage": "snug_spacing"},
+      "4": {"$value": "16px", "multiplier": 2, "usage": "default_spacing"},
+      "5": {"$value": "20px", "multiplier": 2.5, "usage": "comfortable_spacing"},
+      "6": {"$value": "24px", "multiplier": 3, "usage": "generous_spacing"},
+      "8": {"$value": "32px", "multiplier": 4, "usage": "section_spacing"},
+      "10": {"$value": "40px", "multiplier": 5, "usage": "large_gaps"},
+      "12": {"$value": "48px", "multiplier": 6, "usage": "section_margins"},
+      "16": {"$value": "64px", "multiplier": 8, "usage": "major_sections"},
+      "20": {"$value": "80px", "multiplier": 10, "usage": "hero_spacing"},
+      "24": {"$value": "96px", "multiplier": 12, "usage": "page_sections"},
+      "32": {"$value": "128px", "multiplier": 16, "usage": "dramatic_spacing"}
+    },
+    "semantic": {
+      "page_padding": {
+        "mobile": "{spacing.scale.4}",
+        "tablet": "{spacing.scale.6}",
+        "desktop": "{spacing.scale.8}",
+        "wide": "{spacing.scale.12}"
+      },
+      "section_gap": {
+        "$value": "{spacing.scale.24}",
+        "description": "Vertical space between major page sections"
+      },
+      "content_gap": {
+        "$value": "{spacing.scale.16}",
+        "description": "Space between content blocks within sections"
+      },
+      "card_padding": {
+        "$value": "{spacing.scale.6}",
+        "description": "Internal padding for cards"
+      },
+      "card_gap": {
+        "$value": "{spacing.scale.6}",
+        "description": "Space between cards in a grid"
+      },
+      "element_gap": {
+        "$value": "{spacing.scale.4}",
+        "description": "Space between related elements"
+      },
+      "inline_gap": {
+        "$value": "{spacing.scale.2}",
+        "description": "Space between inline elements"
+      },
+      "form_field_gap": {
+        "$value": "{spacing.scale.5}",
+        "description": "Space between form fields"
+      },
+      "button_padding_x": {
+        "$value": "{spacing.scale.6}",
+        "description": "Horizontal padding inside buttons"
+      },
+      "button_padding_y": {
+        "$value": "{spacing.scale.3}",
+        "description": "Vertical padding inside buttons"
+      },
+      "input_padding_x": {
+        "$value": "{spacing.scale.4}",
+        "description": "Horizontal padding inside inputs"
+      },
+      "input_padding_y": {
+        "$value": "{spacing.scale.3}",
+        "description": "Vertical padding inside inputs"
+      }
+    },
+    "container": {
+      "max_width": {
+        "xs": "320px",
+        "sm": "640px",
+        "md": "768px",
+        "lg": "1024px",
+        "xl": "1280px",
+        "2xl": "1440px",
+        "prose": "65ch"
+      }
+    },
+    "breakpoints": {
+      "mobile": "0px",
+      "tablet": "640px",
+      "desktop": "1024px",
+      "wide": "1440px"
+    },
+    "grid": {
+      "columns": 12,
+      "gutter": "{spacing.scale.6}",
+      "margin": "{spacing.semantic.page_padding}"
+    }
+  }
+}

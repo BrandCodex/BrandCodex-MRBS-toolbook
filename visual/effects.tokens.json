@@ -1,0 +1,171 @@
+{
+  "$schema": "https://mrbs.dev/schema/v1/effects.tokens.json",
+  "effects": {
+    "shadow": {
+      "none": {
+        "$value": "none",
+        "$type": "shadow"
+      },
+      "xs": {
+        "$value": "0 1px 2px rgba(15, 9, 37, 0.05)",
+        "$type": "shadow",
+        "usage": "subtle_elevation, input_focus"
+      },
+      "sm": {
+        "$value": "0 1px 3px rgba(15, 9, 37, 0.08), 0 1px 2px rgba(15, 9, 37, 0.04)",
+        "$type": "shadow",
+        "usage": "buttons, small_cards"
+      },
+      "md": {
+        "$value": "0 4px 6px rgba(15, 9, 37, 0.08), 0 2px 4px rgba(15, 9, 37, 0.04)",
+        "$type": "shadow",
+        "usage": "cards, dropdowns"
+      },
+      "lg": {
+        "$value": "0 10px 15px rgba(15, 9, 37, 0.1), 0 4px 6px rgba(15, 9, 37, 0.05)",
+        "$type": "shadow",
+        "usage": "modals, prominent_elements"
+      },
+      "xl": {
+        "$value": "0 20px 25px rgba(15, 9, 37, 0.12), 0 10px 10px rgba(15, 9, 37, 0.04)",
+        "$type": "shadow",
+        "usage": "popovers, floating_elements"
+      },
+      "2xl": {
+        "$value": "0 25px 50px rgba(15, 9, 37, 0.2)",
+        "$type": "shadow",
+        "usage": "hero_cards, dramatic_elevation"
+      },
+      "inner": {
+        "$value": "inset 0 2px 4px rgba(15, 9, 37, 0.06)",
+        "$type": "shadow",
+        "usage": "inset_elements, pressed_states"
+      },
+      "glow_cyan": {
+        "$value": "0 0 20px rgba(0, 255, 209, 0.3), 0 0 40px rgba(0, 255, 209, 0.15)",
+        "$type": "shadow",
+        "usage": "code_highlights, tech_elements, hover_accents",
+        "description": "Signature Code Mint glow effect"
+      },
+      "glow_cyan_strong": {
+        "$value": "0 0 30px rgba(0, 255, 209, 0.5), 0 0 60px rgba(0, 255, 209, 0.25)",
+        "$type": "shadow",
+        "usage": "featured_elements, cta_hover",
+        "description": "Intensified cyan glow for emphasis"
+      },
+      "glow_coral": {
+        "$value": "0 0 20px rgba(255, 122, 92, 0.25)",
+        "$type": "shadow",
+        "usage": "human_centric_highlights, notifications",
+        "description": "Warm coral glow for human elements"
+      },
+      "card_hover": {
+        "$value": "0 20px 40px rgba(15, 9, 37, 0.15), 0 0 30px rgba(0, 255, 209, 0.1)",
+        "$type": "shadow",
+        "usage": "card_hover_state",
+        "description": "Elevated card with subtle cyan accent"
+      }
+    },
+    "radius": {
+      "none": {"$value": "0", "$type": "dimension"},
+      "sm": {"$value": "4px", "$type": "dimension", "usage": "small_elements, tags, badges"},
+      "md": {"$value": "8px", "$type": "dimension", "usage": "buttons, inputs, small_cards"},
+      "lg": {"$value": "12px", "$type": "dimension", "usage": "cards, modals"},
+      "xl": {"$value": "16px", "$type": "dimension", "usage": "large_cards, panels"},
+      "2xl": {"$value": "24px", "$type": "dimension", "usage": "hero_cards, featured_sections"},
+      "3xl": {"$value": "32px", "$type": "dimension", "usage": "large_containers"},
+      "full": {"$value": "9999px", "$type": "dimension", "usage": "pills, avatars, circular_elements"}
+    },
+    "border": {
+      "width": {
+        "thin": "1px",
+        "medium": "2px",
+        "thick": "3px",
+        "accent": "4px"
+      },
+      "style": {
+        "solid": "solid",
+        "dashed": "dashed"
+      }
+    },
+    "transition": {
+      "none": {"$value": "none", "$type": "transition"},
+      "fast": {
+        "$value": "150ms cubic-bezier(0.4, 0, 0.2, 1)",
+        "$type": "transition",
+        "usage": "micro_interactions, hover_states, focus_states"
+      },
+      "normal": {
+        "$value": "250ms cubic-bezier(0.4, 0, 0.2, 1)",
+        "$type": "transition",
+        "usage": "standard_transitions, opacity_changes"
+      },
+      "slow": {
+        "$value": "350ms cubic-bezier(0.4, 0, 0.2, 1)",
+        "$type": "transition",
+        "usage": "larger_transitions, layout_changes"
+      },
+      "slower": {
+        "$value": "500ms cubic-bezier(0.4, 0, 0.2, 1)",
+        "$type": "transition",
+        "usage": "dramatic_transitions, page_elements"
+      },
+      "bounce": {
+        "$value": "500ms cubic-bezier(0.34, 1.56, 0.64, 1)",
+        "$type": "transition",
+        "usage": "playful_interactions, attention_grabbing"
+      },
+      "spring": {
+        "$value": "600ms cubic-bezier(0.175, 0.885, 0.32, 1.275)",
+        "$type": "transition",
+        "usage": "modal_entrances, dropdown_reveals"
+      }
+    },
+    "animation": {
+      "pulse_cyan": {
+        "keyframes": "0% { box-shadow: 0 0 0 0 rgba(0, 255, 209, 0.4); } 70% { box-shadow: 0 0 0 10px rgba(0, 255, 209, 0); } 100% { box-shadow: 0 0 0 0 rgba(0, 255, 209, 0); }",
+        "duration": "2s",
+        "iteration": "infinite",
+        "usage": "attention_indicators, live_status"
+      },
+      "shimmer": {
+        "keyframes": "0% { background-position: -200% 0; } 100% { background-position: 200% 0; }",
+        "duration": "2s",
+        "iteration": "infinite",
+        "usage": "loading_states, skeleton_screens"
+      },
+      "float": {
+        "keyframes": "0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); }",
+        "duration": "3s",
+        "timing": "ease-in-out",
+        "iteration": "infinite",
+        "usage": "hero_elements, decorative_graphics"
+      }
+    },
+    "opacity": {
+      "disabled": {"$value": "0.5", "usage": "disabled_elements"},
+      "muted": {"$value": "0.6", "usage": "secondary_content"},
+      "hover": {"$value": "0.8", "usage": "hover_overlay"},
+      "overlay_light": {"$value": "0.3", "usage": "light_overlays"},
+      "overlay_medium": {"$value": "0.5", "usage": "medium_overlays"},
+      "overlay_dark": {"$value": "0.85", "usage": "modal_backgrounds, image_overlays"}
+    },
+    "blur": {
+      "sm": {"$value": "4px", "usage": "subtle_blur"},
+      "md": {"$value": "8px", "usage": "standard_blur"},
+      "lg": {"$value": "16px", "usage": "heavy_blur"},
+      "xl": {"$value": "24px", "usage": "background_blur"},
+      "2xl": {"$value": "40px", "usage": "dramatic_blur"}
+    },
+    "backdrop": {
+      "blur": {
+        "$value": "blur(12px)",
+        "usage": "glass_morphism_effects"
+      },
+      "saturate": {
+        "$value": "saturate(180%)",
+        "usage": "vibrant_backgrounds"
+      }
+    }
+  }
+}

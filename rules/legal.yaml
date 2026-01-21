@@ -1,0 +1,237 @@
+# Legal Guidelines
+# Brandcodex — Trademark, copyright, and compliance requirements
+
+trademark:
+  description: "Trademark usage and protection"
+  
+  brandcodex_mark:
+    name: "Brandcodex"
+    status: "Common law trademark (™)"
+    registration: "Pending"
+    symbol: "™"
+    
+    proper_usage:
+      first_prominent_use: "Brandcodex™"
+      subsequent_uses: "Brandcodex (no symbol needed)"
+      never:
+        - "brandcodex (all lowercase in prose)"
+        - "Brand Codex (two words)"
+        - "BrandCodex (camelCase)"
+        - "BRANDCODEX (all caps)"
+        
+  mrbs_mark:
+    name: "MRBS"
+    full_name: "Machine-Readable Brand System"
+    status: "Open specification, not trademarked"
+    usage: |
+      MRBS is intentionally not trademarked to encourage adoption.
+      Anyone may create MRBS-compliant systems and use the term freely.
+      
+  usage_rules:
+    - "Always use as adjective, never as noun or verb"
+    - "Never pluralize trademark names"
+    - "Never make possessive"
+    - "Maintain consistent capitalization"
+    
+    examples:
+      correct:
+        - "Brandcodex™ registry helps teams manage brand identity"
+        - "The Brandcodex platform includes..."
+        - "Search for brands on Brandcodex"
+        
+      incorrect:
+        - "Brandcodexes are great" (pluralized)
+          reason: "Trademarks should not be pluralized"
+        - "Brandcodex's features include..." (possessive)
+          reason: "Use 'Brandcodex features' instead"
+        - "You should Brandcodex your guidelines" (verb)
+          reason: "Trademark used as verb"
+          
+  third_party:
+    rules:
+      - "Use third-party trademarks correctly"
+      - "Include appropriate trademark symbols on first use"
+      - "Never imply endorsement without permission"
+      - "Use current official product names"
+      
+    common_references:
+      - name: "Claude"
+        owner: "Anthropic"
+        symbol: "®"
+      - name: "ChatGPT"
+        owner: "OpenAI"
+        symbol: "®"
+      - name: "GitHub"
+        owner: "GitHub, Inc."
+        symbol: "®"
+
+copyright:
+  notice:
+    format: "© [Year] Brandcodex Foundation. All rights reserved."
+    current: "© 2025 Brandcodex Foundation. All rights reserved."
+    
+  placement:
+    required:
+      - location: "Website footer"
+      - location: "Documentation footer"
+      - location: "Specification documents"
+    optional:
+      - location: "Presentation last slide"
+      - location: "Marketing materials"
+      
+  date_rules:
+    single_year: "Use year of first publication"
+    range: "Use 'YYYY-YYYY' for updated works"
+    example: "© 2025 Brandcodex Foundation"
+    
+  specification_license:
+    license: "Apache 2.0"
+    intent: |
+      The MRBS specification is open source to encourage adoption.
+      Organizations may freely implement MRBS-compliant systems.
+      
+  content_license:
+    documentation: "CC BY 4.0 (Creative Commons Attribution)"
+    code_examples: "Apache 2.0"
+    brand_assets: "All rights reserved (Brandcodex brand only)"
+    
+open_source:
+  mrbs_specification:
+    license: "Apache 2.0"
+    permissions:
+      - "Commercial use"
+      - "Modification"
+      - "Distribution"
+      - "Patent use"
+      - "Private use"
+    conditions:
+      - "License and copyright notice"
+      - "State changes"
+    limitations:
+      - "Trademark use (Brandcodex mark)"
+      - "Liability"
+      - "Warranty"
+      
+  contribution:
+    cla: "Contributor License Agreement required for specification changes"
+    process: "All contributions via GitHub pull requests"
+    
+disclaimers:
+  description: "Required disclaimer text by context"
+  
+  contexts:
+    specification:
+      required_when:
+        - "Publishing MRBS specification"
+        - "Creating MRBS-compliant tools"
+      text: |
+        This specification is provided "as is" without warranty of any kind.
+        The authors and contributors are not liable for any damages arising
+        from the use of this specification.
+        
+    ai_generated:
+      required_when:
+        - "Content created with AI assistance"
+        - "AI-validated brand compliance"
+      text: |
+        This content was created/validated with AI assistance. 
+        Please verify critical brand applications independently.
+        
+    brand_compliance:
+      required_when:
+        - "Claiming MRBS compliance"
+        - "Using Brandcodex validation"
+      text: |
+        MRBS compliance indicates adherence to the specification structure.
+        It does not guarantee design quality or brand effectiveness.
+        
+    third_party_brands:
+      required_when:
+        - "Displaying other organizations' brand profiles"
+        - "Providing MCP access to brand data"
+      text: |
+        Brand information is provided by the respective brand owners.
+        Brandcodex does not guarantee accuracy or currency of brand profiles.
+
+privacy:
+  data_collection:
+    what_we_collect:
+      - "Organization name and contact for brand profile submissions"
+      - "Usage analytics (anonymized)"
+      - "API access logs"
+    what_we_dont_collect:
+      - "Personal user data without consent"
+      - "Tracking across external sites"
+      
+  brand_data:
+    visibility: "Published brand profiles are public"
+    ownership: "Brand owners retain all rights to their brand identity"
+    removal: "Brand owners may request removal at any time"
+    
+  gdpr:
+    applies_to: "EU residents' personal data"
+    rights:
+      - "Access to personal data"
+      - "Rectification of inaccurate data"
+      - "Erasure (right to be forgotten)"
+      - "Data portability"
+    contact: "privacy@brandcodex.org"
+
+api_terms:
+  rate_limits:
+    free_tier: "1000 requests/day"
+    authenticated: "10000 requests/day"
+    enterprise: "Custom limits"
+    
+  usage_restrictions:
+    allowed:
+      - "Integrating brand data into AI systems"
+      - "Building tools that consume MRBS data"
+      - "Caching for reasonable periods"
+    prohibited:
+      - "Reselling raw brand data"
+      - "Scraping entire registry"
+      - "Impersonating Brandcodex"
+      - "Circumventing rate limits"
+      
+  attribution:
+    required_for: "Public-facing applications using Brandcodex data"
+    format: "Powered by Brandcodex" or "Brand data from Brandcodex"
+    logo_usage: "May use Brandcodex logo with attribution if guidelines followed"
+
+content_guidelines:
+  brand_profiles:
+    requirements:
+      - "Must represent a legitimate organization or product"
+      - "Must be submitted by authorized representative"
+      - "Must not contain offensive or illegal content"
+      - "Must not infringe on third-party rights"
+      
+    prohibited:
+      - "Impersonation of other brands"
+      - "Misleading or fraudulent brand information"
+      - "Content that violates laws or regulations"
+      - "Malicious code or links"
+      
+  review_process:
+    submission: "Brand profiles reviewed before publication"
+    timeline: "Reviews completed within 5 business days"
+    appeals: "Rejected submissions may appeal with additional documentation"
+
+liability:
+  limitation: |
+    Brandcodex Foundation provides the registry and specification "as is"
+    without warranties of any kind. We are not liable for:
+    - Accuracy of brand information provided by third parties
+    - AI system interpretation of brand guidelines
+    - Business decisions based on brand data
+    - Service interruptions or data loss
+    
+  indemnification: |
+    Users agree to indemnify Brandcodex Foundation against claims
+    arising from their use of the platform or API.
+
+governing_law:
+  jurisdiction: "Laws of the State of Delaware, United States"
+  disputes: "Resolved through binding arbitration"
+  language: "English is the authoritative language for all legal matters"

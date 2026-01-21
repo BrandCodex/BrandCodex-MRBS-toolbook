@@ -1,0 +1,224 @@
+# Naming Conventions
+# Brandcodex — The Index of Machine-Readable Identities
+
+brand_name:
+  primary: "Brandcodex"
+  pronunciation: "BRAND-ko-deks"
+  etymology: |
+    Brand + Codex
+    - Brand: Identity, visual system, voice
+    - Codex: Ancient manuscript, structured knowledge, authoritative record
+    
+  usage:
+    correct:
+      - "Brandcodex" (one word, capital B)
+      - "the Brandcodex" (when referring to the registry)
+      - "Brandcodex.org" (when referring to the website)
+    incorrect:
+      - "Brand Codex" (not two words)
+      - "BrandCodex" (not camelCase)
+      - "brandcodex" (not all lowercase in prose)
+      - "BRANDCODEX" (not all caps)
+    exception: |
+      In code, URLs, and file names, use lowercase: brandcodex
+      Example: brandcodex.org, @brandcodex, npm install brandcodex
+
+specification_name:
+  primary: "MRBS"
+  full_name: "Machine-Readable Brand System"
+  pronunciation: "M-R-B-S (spell it out) or 'Marbs'"
+  
+  usage:
+    first_mention: "Machine-Readable Brand System (MRBS)"
+    subsequent: "MRBS"
+    
+    correct:
+      - "The MRBS specification"
+      - "MRBS-compliant brand systems"
+      - "Following the MRBS standard"
+    incorrect:
+      - "mrbs" (lowercase in prose)
+      - "M.R.B.S." (no periods)
+      - "The Machine-Readable Brand System specification" (redundant after first mention)
+
+products:
+  description: "Naming rules for Brandcodex products and services"
+  
+  pattern: "Brandcodex [Product Name]"
+  
+  rules:
+    - "Product names should be descriptive, not clever"
+    - "Maximum 2 words after Brandcodex"
+    - "Use title case for product names"
+    - "Avoid generic terms alone"
+    
+  current_products:
+    - name: "Brandcodex Registry"
+      description: "The central repository of published brand identities"
+      short_name: "Registry"
+      
+    - name: "Brandcodex Validator"
+      description: "Tool for checking MRBS compliance"
+      short_name: "Validator"
+      
+    - name: "Brandcodex MCP Server"
+      description: "Model Context Protocol server for brand access"
+      short_name: "MCP Server"
+      
+  examples:
+    good:
+      - name: "Brandcodex Studio"
+        reason: "Clear function, professional"
+      - name: "Brandcodex API"
+        reason: "Descriptive, technical audience"
+    bad:
+      - name: "Brandcodex Nexus"
+        reason: "Too abstract, doesn't describe function"
+      - name: "BrandcodexPro"
+        reason: "Avoid 'Pro' suffix; tiers should have meaningful names"
+
+features:
+  description: "Naming rules for product features"
+  
+  pattern: "[Descriptive Name]"
+  
+  rules:
+    - "Use sentence case"
+    - "Be descriptive, not clever"
+    - "Keep to 2-3 words maximum"
+    - "Avoid trademarking feature names"
+    
+  examples:
+    good:
+      - name: "Brand profiles"
+        reason: "Clear, descriptive"
+      - name: "Live validation"
+        reason: "Describes what it does"
+      - name: "Token explorer"
+        reason: "Action-oriented, clear"
+    bad:
+      - name: "BrandSync™"
+        reason: "Unnecessary trademark, vague"
+      - name: "The Hub"
+        reason: "Generic, doesn't describe function"
+      - name: "SmartCheck Pro"
+        reason: "Marketing speak"
+
+file_naming:
+  description: "Conventions for MRBS file names"
+  
+  patterns:
+    manifest: "brand.manifest.json"
+    tokens: "[type].tokens.json"
+    guidelines: "[topic].yaml"
+    schemas: "[type].schema.json"
+    
+  examples:
+    correct:
+      - "brand.manifest.json"
+      - "colors.tokens.json"
+      - "voice-tone.yaml"
+      - "constraints.yaml"
+    incorrect:
+      - "BrandManifest.json" (no PascalCase)
+      - "colors_tokens.json" (use dots, not underscores)
+      - "voice-and-tone-guidelines.yaml" (too long)
+
+mcp_uris:
+  description: "URI patterns for MCP resource access"
+  
+  pattern: "brand://[domain]/[resource]"
+  
+  examples:
+    - "brand://brandcodex.org/manifest"
+    - "brand://brandcodex.org/colors"
+    - "brand://brandcodex.org/voice/professional"
+    - "brand://acme.com/templates/presentation"
+    
+  rules:
+    - "Use lowercase"
+    - "Use forward slashes for hierarchy"
+    - "Domain should match organization's web domain"
+    - "Resource paths mirror file structure"
+
+api_endpoints:
+  description: "REST API naming conventions"
+  
+  pattern: "/api/v{version}/[resource]"
+  
+  examples:
+    correct:
+      - "/api/v1/brands"
+      - "/api/v1/brands/{domain}/colors"
+      - "/api/v1/validate"
+    incorrect:
+      - "/api/getBrands" (no verbs in paths)
+      - "/api/v1/colorTokens" (use kebab-case)
+
+url_slugs:
+  description: "URL and slug conventions"
+  
+  rules:
+    - "Use lowercase only"
+    - "Use hyphens to separate words"
+    - "Keep short and descriptive"
+    - "Avoid special characters"
+    - "Include keywords for SEO"
+    
+  examples:
+    good:
+      - "/brands/acme-corporation"
+      - "/docs/getting-started"
+      - "/specification/v1/colors"
+    bad:
+      - "/brands/Acme_Corporation" (no underscores or caps)
+      - "/docs/gettingStarted" (use hyphens)
+      - "/spec" (too abbreviated)
+
+version_naming:
+  description: "Version number conventions"
+  
+  format: "Semantic Versioning (SemVer)"
+  pattern: "MAJOR.MINOR.PATCH"
+  
+  examples:
+    - "1.0.0" (first stable release)
+    - "1.1.0" (new features, backward compatible)
+    - "1.1.1" (bug fixes)
+    - "2.0.0" (breaking changes)
+    
+  pre_release:
+    alpha: "1.0.0-alpha.1"
+    beta: "1.0.0-beta.1"
+    rc: "1.0.0-rc.1"
+
+internal_projects:
+  description: "Codenames for internal initiatives"
+  
+  theme: "Libraries and archives"
+  
+  examples:
+    - "Alexandria" (major platform rewrite)
+    - "Dewey" (search/organization feature)
+    - "Gutenberg" (publishing system)
+    - "Rosetta" (translation/localization)
+    
+  rules:
+    - "Single word"
+    - "Easy to pronounce"
+    - "Related to knowledge, books, or organization"
+    - "Don't reuse recently used names"
+
+domain_names:
+  primary: "brandcodex.org"
+  rationale: |
+    .org chosen deliberately:
+    - Signals open standard / specification focus
+    - Not primarily commercial
+    - Community-oriented
+    - Trustworthy for standards work
+    
+  reserved:
+    - "brandcodex.com" (redirect to .org)
+    - "brandcodex.dev" (developer documentation)
+    - "mrbs.dev" (specification schema hosting)

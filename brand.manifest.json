@@ -1,0 +1,59 @@
+{
+  "$schema": "https://mrbs.dev/schema/v1/brand.manifest.json",
+  "mrbs_version": "1.0.0",
+  "version": "1.0.0",
+  "updated": "2025-01-21",
+  
+  "organization": {
+    "name": "Brandcodex",
+    "legal_name": "Brandcodex Foundation",
+    "industry": "Technology / Brand Infrastructure",
+    "website": "https://brandcodex.org",
+    "headquarters": "Global / Distributed"
+  },
+  
+  "brand": {
+    "name": "Brandcodex",
+    "tagline": "The Index of Machine-Readable Identities",
+    "mission": "Making brand identity accessible to AI agents through structured, semantic, and programmable formats",
+    "vision": "A world where every brand has a machine-readable identity that AI systems can faithfully interpret and apply",
+    "values": [
+      "Precision",
+      "Accessibility",
+      "Interoperability",
+      "Transparency"
+    ]
+  },
+  
+  "components": {
+    "visual": "./visual/",
+    "identity": "./identity/",
+    "assets": "./assets/",
+    "templates": "./templates/",
+    "rules": "./rules/",
+    "examples": "./examples/"
+  },
+  
+  "ai_instructions": {
+    "priority_order": ["rules", "visual", "identity", "templates"],
+    "validation_required": true,
+    "fallback_behavior": "conservative",
+    "quick_reference": {
+      "primary_color": "#2D1B69",
+      "accent_color": "#00FFD1",
+      "heading_font": "Clash Display",
+      "body_font": "Plus Jakarta Sans",
+      "voice": "Authoritative yet accessible, technical yet human"
+    }
+  },
+  
+  "mcp_endpoint": {
+    "base_uri": "brand://brandcodex.org",
+    "resources": [
+      "brand://brandcodex.org/manifest",
+      "brand://brandcodex.org/colors",
+      "brand://brandcodex.org/typography",
+      "brand://brandcodex.org/voice"
+    ]
+  }
+}

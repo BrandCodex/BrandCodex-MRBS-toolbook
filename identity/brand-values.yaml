@@ -1,0 +1,202 @@
+# Brand Values
+# Brandcodex — The Index of Machine-Readable Identities
+
+brand_essence:
+  purpose: "Making brand identity accessible to AI agents through structured, semantic, and programmable formats"
+  promise: "The authoritative source for machine-readable brand identities"
+  position: "The bridge between human creativity and machine precision"
+  
+  concept: |
+    Brandcodex draws from two powerful metaphors:
+    - CODEX: An ancient manuscript containing structured knowledge, authoritative and enduring
+    - CODE: Modern programming, precise and machine-executable
+    Together, they represent our mission: encoding human brand creativity into machine-readable formats.
+
+mission:
+  statement: "To make brand identity accessible to AI agents through structured, semantic, and programmable formats"
+  keywords:
+    - "accessible"
+    - "structured"
+    - "semantic"
+    - "programmable"
+    - "AI-ready"
+  expanded: |
+    We believe every brand deserves to be understood by the AI systems that increasingly create 
+    content on their behalf. Brandcodex provides the infrastructure, standards, and registry 
+    that makes this possible.
+
+vision:
+  statement: "A world where every brand has a machine-readable identity that AI systems can faithfully interpret and apply"
+  timeframe: "5-10 years"
+  milestones:
+    - "MRBS becomes the de facto standard for AI-ready brand guidelines"
+    - "Major enterprises publish brand identities on Brandcodex"
+    - "AI tools natively integrate with Brandcodex MCP endpoints"
+    - "Brand compliance becomes automated, not manual"
+
+values:
+  - name: "Precision"
+    priority: 1
+    description: "We encode meaning exactly, leaving no room for misinterpretation"
+    icon: "crosshairs"
+    color: "accent_cyan"
+    behaviors:
+      - "Define clear, unambiguous specifications"
+      - "Use semantic structures over loose prose"
+      - "Validate rigorously before publishing"
+      - "Document edge cases and exceptions"
+    anti_behaviors:
+      - "Accepting 'good enough' when precise is possible"
+      - "Using vague language in specifications"
+      - "Publishing without validation"
+    brand_application: |
+      Our specifications are meticulous. Our color values are exact hex codes with usage rules.
+      Our typography includes line heights and letter spacing. Nothing is left to interpretation.
+    
+  - name: "Accessibility"
+    priority: 2
+    description: "Brand knowledge should be accessible to all systems and all people"
+    icon: "unlock"
+    color: "accent_coral"
+    behaviors:
+      - "Write documentation for humans AND machines"
+      - "Provide multiple integration methods (MCP, REST, direct files)"
+      - "Keep specifications open and free"
+      - "Lower barriers to adoption"
+    anti_behaviors:
+      - "Creating proprietary lock-in"
+      - "Writing only for technical audiences"
+      - "Hiding information behind paywalls"
+    brand_application: |
+      Our platform serves designers, developers, and AI agents equally. 
+      Every brand profile is available through human-friendly web pages AND machine-readable endpoints.
+    
+  - name: "Interoperability"
+    priority: 3
+    description: "We build bridges, not walls. Our standards work everywhere."
+    icon: "git-merge"
+    color: "primary"
+    behaviors:
+      - "Follow and extend existing standards (W3C Design Tokens, JSON Schema)"
+      - "Support multiple AI platforms without favoritism"
+      - "Provide export/import capabilities"
+      - "Design for extensibility"
+    anti_behaviors:
+      - "Creating incompatible formats"
+      - "Favoring specific platforms or tools"
+      - "Breaking backward compatibility carelessly"
+    brand_application: |
+      MRBS builds on W3C Design Tokens, not replaces them. 
+      Our MCP endpoints work with Claude, GPT, and any MCP-compatible system.
+    
+  - name: "Transparency"
+    priority: 4
+    description: "Our specifications, governance, and processes are open for all to see"
+    icon: "eye"
+    color: "neutral-600"
+    behaviors:
+      - "Develop specifications in public"
+      - "Document decisions and rationale"
+      - "Accept and address community feedback"
+      - "Publish change logs and roadmaps"
+    anti_behaviors:
+      - "Making decisions behind closed doors"
+      - "Hiding breaking changes"
+      - "Ignoring community input"
+    brand_application: |
+      The MRBS specification is on GitHub for anyone to read, critique, and contribute to.
+      Every Brandcodex profile shows its structure openly—nothing is black-boxed.
+
+personality:
+  archetype: "The Sage"
+  archetype_description: "Wise, knowledgeable, and authoritative—but approachable, not aloof"
+  
+  secondary_archetype: "The Creator"
+  secondary_description: "Enabling others to create through powerful tools and standards"
+  
+  traits:
+    primary:
+      - trait: "Authoritative"
+        meaning: "We are the definitive source—confident in our expertise"
+        evidence: "Specification rigor, detailed documentation, validated schemas"
+        
+      - trait: "Technical"
+        meaning: "We speak the language of developers and AI systems"
+        evidence: "JSON/YAML examples, MCP integration, code-first approach"
+        
+      - trait: "Enabling"
+        meaning: "We empower others to build on our foundation"
+        evidence: "Open standards, comprehensive docs, community contributions"
+        
+    secondary:
+      - trait: "Approachable"
+        meaning: "Complex systems explained clearly"
+        evidence: "Plain language docs alongside technical specs"
+        
+      - trait: "Forward-thinking"
+        meaning: "Building infrastructure for the AI-native future"
+        evidence: "MCP-first design, AI agent considerations baked in"
+        
+      - trait: "Meticulous"
+        meaning: "Every detail considered and documented"
+        evidence: "Comprehensive token metadata, edge case coverage"
+
+  we_are:
+    - "Technical but not intimidating"
+    - "Authoritative but not arrogant"
+    - "Precise but not pedantic"
+    - "Innovative but grounded in standards"
+    - "Serious about quality but not ourselves"
+    
+  we_are_not:
+    - "Flashy or gimmicky"
+    - "Vague or hand-wavy"
+    - "Exclusive or gatekeeping"
+    - "Slow-moving or bureaucratic"
+    - "Dismissive of non-technical users"
+
+target_audience:
+  primary:
+    name: "Enterprise Brand & Design Teams"
+    description: "Teams managing brand identity for organizations using AI tools"
+    characteristics:
+      - "Need to ensure AI-generated content follows brand guidelines"
+      - "Frustrated by manual review cycles"
+      - "Have comprehensive brand guidelines trapped in PDFs"
+      - "See AI as opportunity, not threat"
+    pain_points:
+      - "AI tools can't read their brand guidelines"
+      - "Revision cycles eat up designer time"
+      - "Consistency across AI outputs is nearly impossible"
+      
+  secondary:
+    name: "AI Tool Developers"
+    description: "Developers building AI-powered content creation tools"
+    characteristics:
+      - "Need standardized brand guideline format"
+      - "Building integrations for enterprise customers"
+      - "Value well-documented APIs and schemas"
+    pain_points:
+      - "Every client has different brand guideline formats"
+      - "No standard way to validate brand compliance"
+      - "Building custom parsers for each client"
+      
+  tertiary:
+    name: "AI Agents & Systems"
+    description: "The AI systems that will consume brand identities"
+    characteristics:
+      - "Need structured, semantic data"
+      - "Benefit from explicit constraints and rules"
+      - "Can leverage MCP for real-time brand access"
+    needs:
+      - "Unambiguous color and typography values"
+      - "Clear usage rules and constraints"
+      - "Validation schemas for self-checking"
+
+differentiation:
+  unique_value: "The only registry specifically designed for AI consumption of brand identity"
+  key_differentiators:
+    - "MCP-native: Purpose-built for Model Context Protocol integration"
+    - "Semantic structure: Not just values, but meaning and context"
+    - "Validation-ready: Schemas that enable automated compliance checking"
+    - "Open standard: MRBS specification is free and extensible"

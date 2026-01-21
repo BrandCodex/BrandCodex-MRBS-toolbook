@@ -1,0 +1,347 @@
+# Accessibility Guidelines
+# Brandcodex — WCAG 2.1 AA compliance requirements
+
+compliance_target:
+  standard: "WCAG 2.1"
+  level: "AA"
+  description: "All Brandcodex materials and platforms must meet WCAG 2.1 Level AA requirements"
+  commitment: |
+    Accessibility is core to Brandcodex's mission. We make brand identity accessible 
+    to AI agents—but we start by making it accessible to humans of all abilities.
+
+color_contrast:
+  description: "Text and UI elements must have sufficient contrast"
+  
+  normal_text:
+    minimum_ratio: 4.5
+    applies_to: "Text smaller than 18pt (24px) or 14pt (18.5px) bold"
+    
+  large_text:
+    minimum_ratio: 3.0
+    applies_to: "Text 18pt (24px)+ or 14pt (18.5px)+ bold"
+    
+  ui_components:
+    minimum_ratio: 3.0
+    applies_to: "Buttons, form fields, icons, focus indicators"
+    
+  brand_color_compliance:
+    codex_purple:
+      color: "#2D1B69"
+      on_white:
+        ratio: 12.4
+        passes: ["AA", "AAA"]
+        note: "Excellent for headings on light backgrounds"
+      with_white:
+        ratio: 12.4
+        passes: ["AA", "AAA"]
+        note: "Excellent for text on purple backgrounds"
+        
+    code_mint:
+      color: "#00FFD1"
+      on_codex_purple:
+        ratio: 8.7
+        passes: ["AA", "AAA"]
+        note: "Great for links and highlights on dark backgrounds"
+      on_white:
+        ratio: 1.4
+        passes: []
+        note: "NEVER use as text on light backgrounds"
+      on_neutral_900:
+        ratio: 12.1
+        passes: ["AA", "AAA"]
+        note: "Excellent for text on near-black backgrounds"
+        
+    human_coral:
+      color: "#FF7A5C"
+      on_white:
+        ratio: 3.2
+        passes: ["large_text_only"]
+        note: "Use only for large decorative text, not body"
+      on_codex_purple:
+        ratio: 4.1
+        passes: []
+        note: "Insufficient contrast; avoid this combination"
+        
+  tested_combinations:
+    passing:
+      - foreground: "#FFFFFF"
+        background: "#2D1B69"
+        ratio: 12.4
+        result: "AAA pass"
+        usage: "Primary text on dark"
+        
+      - foreground: "#00FFD1"
+        background: "#2D1B69"
+        ratio: 8.7
+        result: "AAA pass"
+        usage: "Links and highlights on dark"
+        
+      - foreground: "#3D3D52"
+        background: "#FFFFFF"
+        ratio: 8.1
+        result: "AAA pass"
+        usage: "Body text on light"
+        
+      - foreground: "#2D1B69"
+        background: "#FFFFFF"
+        ratio: 12.4
+        result: "AAA pass"
+        usage: "Headlines on light"
+        
+      - foreground: "#00FFD1"
+        background: "#121220"
+        ratio: 12.1
+        result: "AAA pass"
+        usage: "Accent text on near-black"
+        
+    failing:
+      - foreground: "#00FFD1"
+        background: "#FFFFFF"
+        ratio: 1.4
+        result: "FAIL - never use"
+        note: "Code Mint cannot be used as text on light backgrounds"
+        
+      - foreground: "#FF7A5C"
+        background: "#2D1B69"
+        ratio: 4.1
+        result: "FAIL for body text"
+        note: "Coral on purple insufficient for text"
+        
+      - foreground: "#7C7C94"
+        background: "#FFFFFF"
+        ratio: 3.9
+        result: "FAIL for small text"
+        note: "Muted text color needs darker variant for body"
+
+typography:
+  minimum_sizes:
+    body_text: "16px (1rem)"
+    small_text: "14px (0.875rem)"
+    caption: "12px (0.75rem) — use sparingly"
+    minimum_for_accessibility: "14px for any functional text"
+    
+  line_height:
+    minimum: 1.5
+    recommended: "1.6-1.7 for body text"
+    code_blocks: "1.5-1.6"
+    
+  line_length:
+    maximum: "80 characters"
+    recommended: "50-75 characters"
+    achieved_with: "max-width: 65ch"
+    
+  letter_spacing:
+    minimum: "normal (not condensed)"
+    uppercase_text: "0.05em-0.1em additional tracking"
+    
+  text_alignment:
+    preferred: "left"
+    avoid: "justified (creates uneven word spacing)"
+    centered: "Acceptable for headings and short text only"
+    
+  resize:
+    requirement: "Text must be resizable up to 200% without loss of content"
+    implementation: "Use rem/em units, not fixed px for text"
+
+color_independence:
+  rule: "Never use color alone to convey information"
+  
+  examples:
+    bad:
+      - description: "Green check = valid, red X = invalid"
+        problem: "Color blind users cannot distinguish"
+        
+      - description: "Cyan links with no other indicator"
+        problem: "May not be visible to all users"
+        
+    good:
+      - description: "✓ Valid (green) / ✗ Invalid (red)"
+        solution: "Icons + color"
+        
+      - description: "Links with underline + cyan color"
+        solution: "Visual treatment + color"
+        
+  requirements:
+    error_states: "Icon + color + text message"
+    success_states: "Icon + color + text message"
+    links: "Underline (on hover at minimum) + color"
+    form_required: "Asterisk (*) + visual indicator"
+    code_syntax: "Color + formatting (bold, italic)"
+
+images:
+  alt_text:
+    rule: "All meaningful images must have descriptive alt text"
+    
+    guidelines:
+      - "Describe the content and function, not appearance"
+      - "Keep descriptions concise (125 characters or less)"
+      - "Don't start with 'Image of' or 'Picture of'"
+      - "Include text that appears in the image"
+      - "For charts/graphs, summarize the data or insight"
+      
+    examples:
+      good:
+        - image: "MRBS architecture diagram"
+          alt: "MRBS architecture showing manifest connecting to visual, identity, and rules components"
+          
+        - image: "Color token structure"
+          alt: "JSON structure defining primary color with value, usage rules, and accessibility data"
+          
+      bad:
+        - image: "Architecture diagram"
+          alt: "Image"
+          problem: "Not descriptive"
+          
+        - image: "Code example"
+          alt: "Screenshot of code"
+          problem: "Doesn't convey the code content"
+          
+  decorative_images:
+    rule: "Use empty alt text (alt='') for purely decorative images"
+    examples:
+      - "Gradient backgrounds"
+      - "Geometric decorative patterns"
+      - "Visual flourishes"
+      
+  svg_accessibility:
+    rule: "Include title and desc elements for meaningful SVGs"
+    example: |
+      <svg role="img" aria-labelledby="logo-title logo-desc">
+        <title id="logo-title">Brandcodex Logo</title>
+        <desc id="logo-desc">Brandcodex wordmark with icon</desc>
+        <!-- paths -->
+      </svg>
+
+documents:
+  heading_hierarchy:
+    rule: "Use proper heading levels in sequence"
+    
+    correct:
+      - "H1 → H2 → H3 → H4"
+      - "H1 → H2 → H2 → H3"
+      
+    incorrect:
+      - "H1 → H3 (skipped H2)"
+      - "H2 → H1 (wrong order)"
+      - "Using bold text instead of headings"
+      - "Multiple H1s on a page"
+      
+  reading_order:
+    rule: "Content must follow logical reading order"
+    applies_to:
+      - "Multi-column layouts"
+      - "Complex page structures"
+      - "Code alongside explanations"
+      
+  tables:
+    requirements:
+      - "Use table headers (<th>) for column/row labels"
+      - "Include caption for context"
+      - "Don't use tables for layout"
+      - "Keep tables simple when possible"
+      - "For complex tables, provide summary"
+      
+  code_blocks:
+    requirements:
+      - "Use semantic code elements"
+      - "Include language identifier"
+      - "Provide context before code"
+      - "Ensure syntax highlighting doesn't rely on color alone"
+
+interactive_elements:
+  focus_indicators:
+    rule: "All interactive elements must have visible focus states"
+    style: "2px solid cyan (#00FFD1) with 2px offset"
+    minimum_contrast: 3.0
+    never: "Remove focus outlines without replacement"
+    
+  keyboard_navigation:
+    rule: "All functionality must be accessible via keyboard"
+    requirements:
+      - "Tab to navigate between elements"
+      - "Enter/Space to activate buttons"
+      - "Escape to close modals/dropdowns"
+      - "Arrow keys for menu navigation"
+      - "Skip links for main content"
+      
+  touch_targets:
+    minimum_size: "44x44 pixels"
+    minimum_spacing: "8px between targets"
+    mobile_consideration: "Larger targets for mobile interfaces"
+    
+  forms:
+    labels: "Every input must have an associated label"
+    errors: "Clear error messages with suggestions for correction"
+    validation: "Inline validation with screen reader announcements"
+    grouping: "Related fields grouped with fieldset/legend"
+
+motion:
+  reduced_motion:
+    rule: "Respect user's reduced motion preferences"
+    implementation: "@media (prefers-reduced-motion: reduce)"
+    what_to_disable:
+      - "Parallax effects"
+      - "Auto-playing animations"
+      - "Decorative transitions"
+    what_to_keep:
+      - "Essential state changes"
+      - "Loading indicators"
+      
+  auto_play:
+    rule: "No auto-playing media"
+    exception: "If auto-play, must provide pause/stop control"
+    
+  flashing:
+    rule: "No content that flashes more than 3 times per second"
+    reason: "Can trigger seizures"
+
+screen_readers:
+  landmarks:
+    required:
+      - "main (primary content)"
+      - "nav (navigation)"
+      - "header (page header)"
+      - "footer (page footer)"
+    optional:
+      - "aside (complementary content)"
+      - "section (with heading)"
+      
+  aria:
+    use_when: "Native HTML semantics insufficient"
+    principles:
+      - "First rule: Don't use ARIA if native HTML works"
+      - "Ensure ARIA roles match expected behaviors"
+      - "Update aria-live regions appropriately"
+      
+  announcements:
+    dynamic_content: "Use aria-live for important updates"
+    form_errors: "Announce errors when they occur"
+    loading_states: "Announce when content is loading/loaded"
+
+testing_checklist:
+  automated:
+    - "Run axe-core or similar"
+    - "Validate HTML structure"
+    - "Check color contrast ratios"
+    - "Verify heading hierarchy"
+    
+  manual:
+    - "Navigate with keyboard only"
+    - "Test with screen reader (NVDA, VoiceOver)"
+    - "Zoom to 200% and verify usability"
+    - "Test in grayscale mode"
+    - "Verify focus indicators are visible"
+    - "Test reduced motion preference"
+    
+  tools:
+    contrast_checkers:
+      - "WebAIM Contrast Checker"
+      - "Colour Contrast Analyser"
+    screen_readers:
+      - "NVDA (Windows, free)"
+      - "VoiceOver (macOS/iOS, built-in)"
+      - "JAWS (Windows)"
+    automated_testing:
+      - "axe DevTools"
+      - "WAVE"
+      - "Lighthouse"

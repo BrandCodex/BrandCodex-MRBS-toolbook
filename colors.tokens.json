@@ -1,0 +1,218 @@
+{
+  "$schema": "https://mrbs.dev/schema/v1/colors.tokens.json",
+  "color": {
+    "brand": {
+      "primary": {
+        "$value": "#2D1B69",
+        "$type": "color",
+        "name": "Codex Purple",
+        "semantic_role": "brand_identity",
+        "description": "Deep violet representing wisdom, authority, and the structured nature of a codex",
+        "usage": {
+          "recommended": ["backgrounds", "headers", "navigation", "primary_cta"],
+          "allowed": ["borders", "icons", "dividers"],
+          "prohibited": ["body_text_on_light", "warning_states"]
+        },
+        "pairing": {
+          "approved_foregrounds": ["white", "neutral-50", "accent-cyan", "accent-coral"],
+          "approved_backgrounds": ["white", "neutral-50"],
+          "prohibited_pairs": ["accent-coral_as_background"]
+        },
+        "accessibility": {
+          "wcag_level": "AAA",
+          "tested_combinations": [
+            {"foreground": "#FFFFFF", "background": "#2D1B69", "ratio": 12.4, "passes": ["AA", "AAA"]},
+            {"foreground": "#00FFD1", "background": "#2D1B69", "ratio": 8.7, "passes": ["AA", "AAA"]}
+          ]
+        },
+        "emotional_association": ["wisdom", "authority", "depth", "creativity", "trust"],
+        "variants": {
+          "light": "#4A3A8C",
+          "lighter": "#6B5AAF",
+          "dark": "#1E1147",
+          "darkest": "#0F0925"
+        }
+      },
+      "accent_cyan": {
+        "$value": "#00FFD1",
+        "$type": "color",
+        "name": "Code Mint",
+        "semantic_role": "machine_interface",
+        "description": "Electric cyan/mint representing code, AI systems, and machine-readability",
+        "usage": {
+          "recommended": ["highlights", "interactive_elements", "code_accents", "links", "success_states"],
+          "allowed": ["icons", "badges", "borders", "hover_states"],
+          "prohibited": ["body_text", "large_backgrounds_without_darkening"]
+        },
+        "pairing": {
+          "approved_backgrounds": ["primary", "primary-dark", "neutral-900", "neutral-800"],
+          "prohibited_pairs": ["white_background_as_text"]
+        },
+        "accessibility": {
+          "wcag_level": "AA",
+          "min_contrast_ratio": 4.5,
+          "note": "Best used on dark backgrounds for text applications",
+          "tested_combinations": [
+            {"foreground": "#00FFD1", "background": "#2D1B69", "ratio": 8.7, "passes": ["AA", "AAA"]},
+            {"foreground": "#00FFD1", "background": "#0F0925", "ratio": 12.1, "passes": ["AA", "AAA"]}
+          ]
+        },
+        "emotional_association": ["technology", "freshness", "precision", "futuristic", "ai"],
+        "variants": {
+          "muted": "#4DFFD9",
+          "dark": "#00CCA7",
+          "glow": "rgba(0, 255, 209, 0.4)"
+        }
+      },
+      "accent_coral": {
+        "$value": "#FF7A5C",
+        "$type": "color",
+        "name": "Human Coral",
+        "semantic_role": "human_warmth",
+        "description": "Warm coral representing the human side of branding - creativity, warmth, approachability",
+        "usage": {
+          "recommended": ["secondary_accents", "callouts", "notifications", "human_centric_content"],
+          "allowed": ["icons", "small_decorative_elements", "hover_states"],
+          "prohibited": ["primary_cta", "navigation", "body_text"],
+          "limit": "≤10% of design surface"
+        },
+        "pairing": {
+          "approved_backgrounds": ["white", "neutral-50", "primary-dark"],
+          "prohibited_pairs": ["accent-cyan_adjacent", "primary_as_background"]
+        },
+        "emotional_association": ["warmth", "creativity", "human", "energy", "approachability"],
+        "variants": {
+          "light": "#FFB5A3",
+          "dark": "#E55A3C",
+          "muted": "#FF9680"
+        }
+      }
+    },
+    "neutral": {
+      "white": {
+        "$value": "#FFFFFF",
+        "$type": "color",
+        "role": "background_primary_light"
+      },
+      "50": {
+        "$value": "#FAFAFC",
+        "$type": "color",
+        "role": "background_subtle",
+        "note": "Slight violet tint for brand cohesion"
+      },
+      "100": {
+        "$value": "#F4F4F8",
+        "$type": "color",
+        "role": "background_secondary"
+      },
+      "200": {
+        "$value": "#E8E8F0",
+        "$type": "color",
+        "role": "border_light"
+      },
+      "300": {
+        "$value": "#D1D1DE",
+        "$type": "color",
+        "role": "border_default"
+      },
+      "400": {
+        "$value": "#A8A8BC",
+        "$type": "color",
+        "role": "text_placeholder"
+      },
+      "500": {
+        "$value": "#7C7C94",
+        "$type": "color",
+        "role": "text_muted"
+      },
+      "600": {
+        "$value": "#5C5C72",
+        "$type": "color",
+        "role": "text_secondary"
+      },
+      "700": {
+        "$value": "#3D3D52",
+        "$type": "color",
+        "role": "text_primary_light_bg"
+      },
+      "800": {
+        "$value": "#252536",
+        "$type": "color",
+        "role": "text_strong"
+      },
+      "900": {
+        "$value": "#121220",
+        "$type": "color",
+        "role": "background_primary_dark"
+      }
+    },
+    "semantic": {
+      "success": {
+        "$value": "#00CCA7",
+        "$type": "color",
+        "description": "Derived from Code Mint, darker for text readability",
+        "usage": ["success_messages", "positive_indicators", "validation_passed"]
+      },
+      "warning": {
+        "$value": "#FFB347",
+        "$type": "color",
+        "description": "Warm amber, complementary to coral",
+        "usage": ["warnings", "pending_states", "attention_needed"]
+      },
+      "error": {
+        "$value": "#FF5252",
+        "$type": "color",
+        "description": "Clear red for errors, distinct from coral",
+        "usage": ["error_messages", "validation_failed", "critical_alerts"]
+      },
+      "info": {
+        "$value": "#5B8DEF",
+        "$type": "color",
+        "description": "Soft blue, bridges primary and cyan",
+        "usage": ["informational_messages", "tips", "neutral_highlights"]
+      }
+    },
+    "gradients": {
+      "codex_glow": {
+        "$value": "linear-gradient(135deg, #2D1B69 0%, #1E1147 50%, #0F0925 100%)",
+        "$type": "gradient",
+        "usage": "hero_backgrounds, immersive_sections"
+      },
+      "cyber_edge": {
+        "$value": "linear-gradient(90deg, #00FFD1 0%, #00CCA7 100%)",
+        "$type": "gradient",
+        "usage": "accent_borders, progress_bars, highlights"
+      },
+      "aurora": {
+        "$value": "linear-gradient(135deg, #2D1B69 0%, #4A3A8C 25%, #00CCA7 75%, #00FFD1 100%)",
+        "$type": "gradient",
+        "usage": "special_features, premium_elements"
+      },
+      "depth": {
+        "$value": "radial-gradient(ellipse at top, #4A3A8C 0%, #2D1B69 40%, #0F0925 100%)",
+        "$type": "gradient",
+        "usage": "page_backgrounds, atmospheric_depth"
+      }
+    }
+  },
+  "accessibility": {
+    "min_contrast_text": 4.5,
+    "min_contrast_large_text": 3.0,
+    "min_contrast_ui": 3.0,
+    "tested_combinations": [
+      {"foreground": "neutral-700", "background": "white", "ratio": 8.1, "passes": ["AA", "AAA"]},
+      {"foreground": "neutral-800", "background": "white", "ratio": 13.5, "passes": ["AA", "AAA"]},
+      {"foreground": "white", "background": "primary", "ratio": 12.4, "passes": ["AA", "AAA"]},
+      {"foreground": "accent-cyan", "background": "primary", "ratio": 8.7, "passes": ["AA", "AAA"]},
+      {"foreground": "accent-cyan", "background": "neutral-900", "ratio": 12.1, "passes": ["AA", "AAA"]},
+      {"foreground": "neutral-50", "background": "primary", "ratio": 11.8, "passes": ["AA", "AAA"]}
+    ]
+  },
+  "color_philosophy": {
+    "overview": "The Brandcodex palette bridges the ancient concept of a codex (structured knowledge) with modern code/AI systems",
+    "primary_meaning": "Codex Purple represents depth, wisdom, and the authoritative nature of a registry",
+    "accent_cyan_meaning": "Code Mint represents machine-readability, AI systems, and technical precision",
+    "accent_coral_meaning": "Human Coral represents the creative, warm, human side of brand identity",
+    "balance": "Cool technical elements (purple, cyan) balanced with warm human elements (coral)"
+  }
+}

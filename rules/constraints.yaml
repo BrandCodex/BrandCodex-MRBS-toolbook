@@ -1,0 +1,328 @@
+# Brand Constraints
+# Brandcodex — Machine-readable do's and don'ts
+
+logo:
+  description: "Rules for Brandcodex logo usage"
+  
+  variants:
+    available:
+      - id: "primary"
+        description: "Full wordmark with icon"
+        usage: "Default for light backgrounds"
+        file: "brandcodex-logo-primary.svg"
+        
+      - id: "reversed"
+        description: "Light version for dark backgrounds"
+        usage: "On Codex Purple or dark backgrounds"
+        file: "brandcodex-logo-reversed.svg"
+        
+      - id: "icon"
+        description: "Logomark only (no wordmark)"
+        usage: "Favicon, app icons, small spaces, social avatars"
+        file: "brandcodex-icon.svg"
+        
+      - id: "monochrome"
+        description: "Single color version"
+        usage: "Single-color applications, watermarks"
+        variants: ["black", "white", "primary"]
+        
+  minimum_sizes:
+    digital:
+      full_logo: "120px width"
+      icon_only: "24px"
+    print:
+      full_logo: "30mm width"
+      icon_only: "8mm"
+      
+  clear_space:
+    measurement: "Height of the icon element"
+    minimum: "1x on all sides"
+    description: "This zone must remain free of other elements"
+    
+  backgrounds:
+    approved:
+      - background: "white"
+        logo_variant: "primary"
+      - background: "neutral-50"
+        logo_variant: "primary"
+      - background: "primary (Codex Purple)"
+        logo_variant: "reversed"
+      - background: "neutral-900"
+        logo_variant: "reversed"
+      - background: "gradient (codex_glow)"
+        logo_variant: "reversed"
+    prohibited:
+      - "Busy patterns or images"
+      - "Low contrast backgrounds"
+      - "Competing brand elements"
+      - "Bright or saturated colors without contrast check"
+      
+  do:
+    - "Use only approved logo files from the asset library"
+    - "Maintain original aspect ratio at all times"
+    - "Ensure minimum clear space around logo"
+    - "Use reversed version on dark backgrounds (luminance < 0.5)"
+    - "Use icon-only variant when space is limited"
+    - "Verify contrast meets accessibility standards"
+    
+  dont:
+    - "Rotate, skew, or distort the logo"
+    - "Add shadows, glows, or effects (the cyan glow is built-in where appropriate)"
+    - "Change logo colors outside approved variants"
+    - "Place on busy or low-contrast backgrounds"
+    - "Stretch or compress the logo"
+    - "Crop any part of the logo"
+    - "Recreate or redraw the logo"
+    - "Add additional elements to the logo"
+    - "Animate the logo without approval"
+    - "Use outdated logo versions"
+
+colors:
+  description: "Rules for color usage"
+  
+  primary_color:
+    name: "Codex Purple"
+    value: "#2D1B69"
+    usage:
+      recommended:
+        - "Hero backgrounds"
+        - "Navigation backgrounds"
+        - "Primary headers"
+        - "Dark mode base"
+      allowed:
+        - "Borders and dividers"
+        - "Text on light backgrounds (large only)"
+        - "Icons"
+      prohibited:
+        - "Body text on light backgrounds (contrast concerns)"
+        - "Warning or error states"
+        - "Links (use cyan instead)"
+        
+  accent_cyan:
+    name: "Code Mint"
+    value: "#00FFD1"
+    usage:
+      recommended:
+        - "Interactive elements on dark backgrounds"
+        - "Links (on dark backgrounds)"
+        - "Code highlights"
+        - "Success indicators"
+        - "Hover states"
+      allowed:
+        - "Small accent elements"
+        - "Icons on dark backgrounds"
+        - "Borders and underlines"
+      prohibited:
+        - "Text on light backgrounds (insufficient contrast)"
+        - "Large background areas (too bright)"
+        - "Body text at any size"
+      limit: "Use as accent, not primary surface color"
+        
+  accent_coral:
+    name: "Human Coral"
+    value: "#FF7A5C"
+    usage:
+      recommended:
+        - "Human-centric highlights"
+        - "Notifications"
+        - "Secondary callouts"
+      allowed:
+        - "Small decorative elements"
+        - "Icons"
+      prohibited:
+        - "Primary CTAs (use cyan)"
+        - "Navigation elements"
+        - "Body text"
+        - "Direct adjacency to cyan"
+      limit: "≤10% of design surface"
+        
+  combinations:
+    approved:
+      - foreground: "white"
+        background: "primary (#2D1B69)"
+        ratio: 12.4
+        usage: "Primary content on dark"
+        
+      - foreground: "accent_cyan (#00FFD1)"
+        background: "primary (#2D1B69)"
+        ratio: 8.7
+        usage: "Links, highlights on dark"
+        
+      - foreground: "neutral-700 (#3D3D52)"
+        background: "white"
+        ratio: 8.1
+        usage: "Body text on light"
+        
+      - foreground: "primary (#2D1B69)"
+        background: "white"
+        ratio: 12.4
+        usage: "Headlines on light"
+        
+    prohibited:
+      - colors: ["accent_cyan", "white"]
+        as: "text"
+        reason: "Insufficient contrast for text"
+        
+      - colors: ["accent_cyan", "accent_coral"]
+        as: "adjacent"
+        reason: "Visual clash, too much energy"
+        
+      - colors: ["accent_coral", "primary"]
+        as: "text_on_background"
+        reason: "Insufficient contrast"
+
+typography:
+  description: "Rules for typography usage"
+  
+  font_pairing:
+    rule: "Maximum 3 font families in any design"
+    primary: "Clash Display for display headlines only"
+    secondary: "Plus Jakarta Sans for all other text"
+    tertiary: "JetBrains Mono for code only"
+    
+  hierarchy:
+    rule: "Maintain clear visual hierarchy; never skip levels"
+    levels:
+      - "Display: Hero headlines, major brand statements"
+      - "H1: Page titles"
+      - "H2: Section headings"
+      - "H3: Subsection headings"
+      - "H4: Minor headings"
+      - "Body: Main content"
+      - "Caption: Supporting text, labels"
+      
+  do:
+    - "Use Clash Display sparingly—heroes and brand moments only"
+    - "Maintain consistent heading hierarchy"
+    - "Use adequate line height (1.5+ for body)"
+    - "Left-align body text"
+    - "Use JetBrains Mono for all code, URIs, and technical values"
+    - "Define technical terms on first use"
+    
+  dont:
+    - "Use Clash Display for body text or UI elements"
+    - "Mix more than 3 font families"
+    - "Use all caps for more than 3 words (except overlines)"
+    - "Justify body text"
+    - "Use decorative or script fonts"
+    - "Use text smaller than 14px for body content"
+    - "Stretch or compress type"
+    - "Use low-contrast text colors"
+
+imagery:
+  description: "Rules for photography and graphics"
+  
+  style:
+    preferred:
+      - "Abstract tech imagery: gradients, grids, nodes, connections"
+      - "Clean, minimal compositions"
+      - "Dark backgrounds with cyan/purple accent lighting"
+      - "Code and terminal imagery (authentic, not cheesy)"
+      - "Geometric patterns and structures"
+    avoid:
+      - "Stock photos of people pointing at screens"
+      - "Cheesy tech clichés (floating holograms, green matrix text)"
+      - "Overly busy or cluttered images"
+      - "Low-quality or pixelated images"
+      - "Images that clash with brand colors"
+      
+  treatments:
+    allowed:
+      - "Brand color overlay (30% max opacity)"
+      - "Gradient overlays using brand gradients"
+      - "Subtle grain texture for depth"
+      - "Color grading toward brand palette"
+    prohibited:
+      - "Heavy vignettes"
+      - "Artificial lens flares"
+      - "HDR or oversaturated effects"
+      - "Adding unrelated brand elements"
+      
+  illustrations:
+    style: "Geometric, structured, technical"
+    colors: "Use brand palette exclusively"
+    line_weight: "Consistent within each illustration"
+    avoid: "Cartoon or overly playful styles"
+
+website:
+  description: "Rules specific to web presence"
+  
+  backgrounds:
+    dark_mode_primary: "neutral-900 (#121220) or primary variants"
+    light_mode_primary: "white or neutral-50"
+    hero_sections: "Use codex_glow or depth gradients"
+    
+  interactive_elements:
+    buttons:
+      primary: "Cyan background, dark text"
+      secondary: "Outline with cyan border"
+      hover: "Add subtle glow_cyan effect"
+    links:
+      dark_bg: "Cyan (#00FFD1)"
+      light_bg: "Primary (#2D1B69)"
+      hover: "Underline or brightness shift"
+    focus:
+      style: "2px cyan outline with 2px offset"
+      
+  code_blocks:
+    background: "neutral-900 or rgba(0,0,0,0.4)"
+    syntax_highlighting: "Use brand colors: cyan for strings, coral for keywords"
+    border: "Subtle cyan left border or glow"
+
+presentations:
+  description: "Rules for presentation design"
+  
+  structure:
+    required:
+      first_slide: "title"
+      last_slide: "closing"
+    recommended:
+      section_dividers: "Every 4-6 slides"
+      
+  content_limits:
+    max_bullets_per_slide: 5
+    max_words_per_bullet: 12
+    max_words_per_slide: 60
+    min_font_size: "18pt"
+    
+  visual_style:
+    backgrounds:
+      - "Dark (Codex Purple or gradient)"
+      - "Light (white with subtle texture)"
+    accent_usage: "Cyan for highlights, coral sparingly"
+    code_examples: "Dark background with syntax highlighting"
+    
+  do:
+    - "Use dark backgrounds for technical/code content"
+    - "One idea per slide"
+    - "Use high-quality, relevant visuals"
+    - "Include speaker notes for context"
+    
+  dont:
+    - "Overcrowd slides"
+    - "Use small text"
+    - "Mix too many colors"
+    - "Use clip art or low-quality graphics"
+
+documents:
+  description: "Rules for document design"
+  
+  margins:
+    standard: "1 inch (25.4mm) all sides"
+    minimum: "0.75 inch (19mm)"
+    
+  headers_footers:
+    header: "Document title or section"
+    footer: "Page number, Brandcodex logo (small)"
+    
+  do:
+    - "Use consistent heading hierarchy"
+    - "Include page numbers"
+    - "Use brand colors for headings and accents"
+    - "Include code blocks for technical content"
+    
+  dont:
+    - "Use Clash Display in documents (it's for display only)"
+    - "Create dense walls of text"
+    - "Use excessive bold or italics"
+    - "Skip heading levels"

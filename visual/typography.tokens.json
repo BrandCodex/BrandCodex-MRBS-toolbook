@@ -1,0 +1,261 @@
+{
+  "$schema": "https://mrbs.dev/schema/v1/typography.tokens.json",
+  "typography": {
+    "font_family": {
+      "display": {
+        "$value": "Clash Display",
+        "$type": "fontFamily",
+        "fallback": ["system-ui", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
+        "weights": [400, 500, 600, 700],
+        "usage": "hero_headlines, major_section_titles, brand_statements",
+        "character": "Bold, geometric, confident - embodies the authoritative nature of a codex",
+        "source": {
+          "type": "fontshare",
+          "url": "https://www.fontshare.com/fonts/clash-display",
+          "license": "Fontshare Free License"
+        }
+      },
+      "heading": {
+        "$value": "Plus Jakarta Sans",
+        "$type": "fontFamily",
+        "fallback": ["system-ui", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
+        "weights": [500, 600, 700, 800],
+        "usage": "page_headings, subheadings, navigation, buttons",
+        "character": "Modern, clean, slightly humanist - bridges technical and approachable",
+        "source": {
+          "type": "google_fonts",
+          "url": "https://fonts.google.com/specimen/Plus+Jakarta+Sans",
+          "license": "OFL-1.1"
+        }
+      },
+      "body": {
+        "$value": "Plus Jakarta Sans",
+        "$type": "fontFamily",
+        "fallback": ["system-ui", "-apple-system", "sans-serif"],
+        "weights": [400, 500, 600],
+        "usage": "body_text, descriptions, ui_elements, labels",
+        "character": "Excellent readability, professional, friendly",
+        "source": {
+          "type": "google_fonts",
+          "url": "https://fonts.google.com/specimen/Plus+Jakarta+Sans",
+          "license": "OFL-1.1"
+        }
+      },
+      "mono": {
+        "$value": "JetBrains Mono",
+        "$type": "fontFamily",
+        "fallback": ["SF Mono", "Consolas", "Monaco", "monospace"],
+        "weights": [400, 500, 600],
+        "usage": "code_snippets, technical_content, json_yaml_examples, mcp_uris",
+        "character": "Technical precision, code-native, developer-friendly",
+        "source": {
+          "type": "google_fonts",
+          "url": "https://fonts.google.com/specimen/JetBrains+Mono",
+          "license": "OFL-1.1"
+        }
+      }
+    },
+    "scale": {
+      "base": {
+        "$value": "16px",
+        "$type": "dimension",
+        "description": "Base font size for optimal readability"
+      },
+      "ratio": {
+        "$value": 1.25,
+        "$type": "number",
+        "description": "Major third scale for harmonious progression"
+      },
+      "display_hero": {
+        "$value": "4.5rem",
+        "$type": "dimension",
+        "computed": "72px",
+        "line_height": 1.0,
+        "font_weight": 600,
+        "font_family": "{typography.font_family.display}",
+        "letter_spacing": "-0.03em",
+        "usage": "hero_headlines, landing_page_titles",
+        "text_transform": "none"
+      },
+      "display_large": {
+        "$value": "3.5rem",
+        "$type": "dimension",
+        "computed": "56px",
+        "line_height": 1.1,
+        "font_weight": 600,
+        "font_family": "{typography.font_family.display}",
+        "letter_spacing": "-0.02em",
+        "usage": "major_section_headings"
+      },
+      "display_medium": {
+        "$value": "2.5rem",
+        "$type": "dimension",
+        "computed": "40px",
+        "line_height": 1.15,
+        "font_weight": 500,
+        "font_family": "{typography.font_family.display}",
+        "letter_spacing": "-0.01em",
+        "usage": "section_titles"
+      },
+      "h1": {
+        "$value": "2rem",
+        "$type": "dimension",
+        "computed": "32px",
+        "line_height": 1.2,
+        "font_weight": 700,
+        "font_family": "{typography.font_family.heading}",
+        "letter_spacing": "-0.01em",
+        "usage": "page_titles, major_headings"
+      },
+      "h2": {
+        "$value": "1.5rem",
+        "$type": "dimension",
+        "computed": "24px",
+        "line_height": 1.3,
+        "font_weight": 600,
+        "font_family": "{typography.font_family.heading}",
+        "letter_spacing": "0",
+        "usage": "section_headings, card_titles"
+      },
+      "h3": {
+        "$value": "1.25rem",
+        "$type": "dimension",
+        "computed": "20px",
+        "line_height": 1.4,
+        "font_weight": 600,
+        "font_family": "{typography.font_family.heading}",
+        "usage": "subsection_headings, list_titles"
+      },
+      "h4": {
+        "$value": "1.125rem",
+        "$type": "dimension",
+        "computed": "18px",
+        "line_height": 1.45,
+        "font_weight": 600,
+        "font_family": "{typography.font_family.heading}",
+        "usage": "minor_headings, labels"
+      },
+      "body_large": {
+        "$value": "1.125rem",
+        "$type": "dimension",
+        "computed": "18px",
+        "line_height": 1.7,
+        "font_weight": 400,
+        "font_family": "{typography.font_family.body}",
+        "usage": "lead_paragraphs, introductions, featured_text"
+      },
+      "body": {
+        "$value": "1rem",
+        "$type": "dimension",
+        "computed": "16px",
+        "line_height": 1.7,
+        "font_weight": 400,
+        "font_family": "{typography.font_family.body}",
+        "usage": "paragraphs, descriptions, general_content"
+      },
+      "body_small": {
+        "$value": "0.875rem",
+        "$type": "dimension",
+        "computed": "14px",
+        "line_height": 1.6,
+        "font_weight": 400,
+        "font_family": "{typography.font_family.body}",
+        "usage": "supporting_text, meta_information, ui_elements"
+      },
+      "caption": {
+        "$value": "0.75rem",
+        "$type": "dimension",
+        "computed": "12px",
+        "line_height": 1.5,
+        "font_weight": 500,
+        "font_family": "{typography.font_family.body}",
+        "letter_spacing": "0.02em",
+        "usage": "captions, footnotes, labels, timestamps"
+      },
+      "overline": {
+        "$value": "0.75rem",
+        "$type": "dimension",
+        "computed": "12px",
+        "line_height": 1.4,
+        "font_weight": 600,
+        "font_family": "{typography.font_family.heading}",
+        "letter_spacing": "0.1em",
+        "text_transform": "uppercase",
+        "usage": "category_labels, section_markers, eyebrows"
+      },
+      "code_block": {
+        "$value": "0.875rem",
+        "$type": "dimension",
+        "computed": "14px",
+        "line_height": 1.6,
+        "font_weight": 400,
+        "font_family": "{typography.font_family.mono}",
+        "usage": "code_examples, json_yaml, technical_snippets"
+      },
+      "code_inline": {
+        "$value": "0.875em",
+        "$type": "dimension",
+        "line_height": "inherit",
+        "font_weight": 500,
+        "font_family": "{typography.font_family.mono}",
+        "usage": "inline_code, file_names, mcp_uris"
+      }
+    },
+    "presentation": {
+      "title_slide": {
+        "size": "56pt",
+        "weight": 600,
+        "line_height": 1.0,
+        "font_family": "{typography.font_family.display}",
+        "max_characters": 50
+      },
+      "section_header": {
+        "size": "44pt",
+        "weight": 500,
+        "line_height": 1.1,
+        "font_family": "{typography.font_family.display}",
+        "max_characters": 40
+      },
+      "slide_title": {
+        "size": "32pt",
+        "weight": 700,
+        "line_height": 1.2,
+        "font_family": "{typography.font_family.heading}",
+        "max_characters": 50
+      },
+      "body": {
+        "size": "20pt",
+        "weight": 400,
+        "line_height": 1.5,
+        "font_family": "{typography.font_family.body}"
+      },
+      "code": {
+        "size": "16pt",
+        "weight": 400,
+        "line_height": 1.5,
+        "font_family": "{typography.font_family.mono}"
+      },
+      "caption": {
+        "size": "14pt",
+        "weight": 500,
+        "line_height": 1.4,
+        "font_family": "{typography.font_family.body}"
+      }
+    },
+    "rules": {
+      "max_font_families": 3,
+      "display_for_heroes_only": true,
+      "heading_font_for_headings_only": true,
+      "minimum_body_size": "14px",
+      "minimum_line_height": 1.4,
+      "maximum_line_length": "75ch",
+      "code_always_mono": true
+    },
+    "typography_philosophy": {
+      "overview": "Three-tier typography system: Display for impact, Heading for structure, Body for content",
+      "clash_display": "Used sparingly for maximum impact - hero headlines and brand statements only",
+      "plus_jakarta_sans": "Workhorse font balancing technical clarity with human warmth",
+      "jetbrains_mono": "Technical precision for code, respecting developer expectations"
+    }
+  }
+}
