@@ -5,7 +5,7 @@
   "updated": "2025-01-21",
   
   "organization": {
-    "name": "Brandcodex",
+    "name": "BrandCodex",
     "legal_name": "Brandcodex Foundation",
     "industry": "Technology / Brand Infrastructure",
     "website": "https://brandcodex.org",
@@ -13,8 +13,8 @@
   },
   
   "brand": {
-    "name": "Brandcodex",
-    "tagline": "The Index of Machine-Readable Identities",
+    "name": "BrandCodex",
+    "tagline": "Brand Identity Platform for Humans & AI Agents",
     "mission": "Making brand identity accessible to AI agents through structured, semantic, and programmable formats",
     "vision": "A world where every brand has a machine-readable identity that AI systems can faithfully interpret and apply",
     "values": [

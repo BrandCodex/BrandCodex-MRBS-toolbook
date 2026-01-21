@@ -1,11 +1,17 @@
-# Brandcodex Brand System
+# BrandCodex Brand System
 
 [![MRBS Version](https://img.shields.io/badge/MRBS-v1.0.0-00FFD1)](https://github.com/MRBSystem/MRBS-Specification)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](./LICENSE)
 
-**The official brand identity for Brandcodex — The Index of Machine-Readable Identities**
+**The official brand identity for BrandCodex | Brand Identity Platform for Humans & AI Agents**
 
-This repository contains the complete, MRBS-compliant brand system for Brandcodex. It serves as both the authoritative source of truth for Brandcodex brand identity AND as a reference implementation of the MRBS specification.
+This repository contains the complete, MRBS-compliant brand system for **BrandCodex**.
+
+**BrandCodex | Brand Identity Platform for Humans & AI Agents** includes:
+- A **public SaaS registry** of brands (e.g., `/company/{Name}/index`)
+- **Per-company MCP endpoints** (e.g., `/company/{Name}/mcp`) for AI agent consumption
+- A **brand identity workspace** to create, edit, validate, and transform machine-readable identity into human-readable views
+- An **on-prem/self-host installable publisher** so organizations can host their own BrandCodex instance and expose brand identity + MCP endpoints for internal and external users
 
 ---
 
@@ -245,6 +251,6 @@ MRBS enables:
 ---
 
 <p align="center">
-  <strong>Brandcodex — The Index of Machine-Readable Identities</strong><br>
+  <strong>BrandCodex | Brand Identity Platform for Humans & AI Agents</strong><br>
   <a href="https://brandcodex.org">brandcodex.org</a>
 </p>
